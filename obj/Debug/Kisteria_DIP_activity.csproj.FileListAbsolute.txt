@@ -1,0 +1,17 @@
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\Kisteria_DIP_activity.exe.config
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\Kisteria_DIP_activity.exe
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\Kisteria_DIP_activity.pdb
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria_DIP_activity.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria_DIP_activity.Form1.resources
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria_DIP_activity.Properties.Resources.resources
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria_DIP_activity.csproj.GenerateResource.cache
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria_DIP_activity.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria_DIP_activity.exe
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria_DIP_activity.pdb
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\AForge.dll
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\AForge.Video.dll
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\AForge.xml
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\AForge.Video.xml
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Dell\source\repos\Kisteria_DIP_activity\Kisteria_DIP_activity\obj\Debug\Kisteria.ECB64414.Up2Date
