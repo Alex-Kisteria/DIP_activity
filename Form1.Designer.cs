@@ -50,6 +50,16 @@
             this.mirrorHorizontalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mirrorVerticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.convolutionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.smoothToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gaussianBlurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.meanRemovalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sharpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.embossToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edgeDetectQuickToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edgeDetectHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edgeDetectVerticalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.edgeDetectAllDetectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -74,6 +84,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.trackBar6 = new System.Windows.Forms.TrackBar();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -83,6 +95,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -92,7 +105,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.digitalImageProcessingToolStripMenuItem,
-            this.videoToolStripMenuItem});
+            this.videoToolStripMenuItem,
+            this.convolutionToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1678, 33);
@@ -139,49 +153,49 @@
             // pixelCopyToolStripMenuItem
             // 
             this.pixelCopyToolStripMenuItem.Name = "pixelCopyToolStripMenuItem";
-            this.pixelCopyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.pixelCopyToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.pixelCopyToolStripMenuItem.Text = "Pixel Copy";
             this.pixelCopyToolStripMenuItem.Click += new System.EventHandler(this.pixelCopyToolStripMenuItem_Click);
             // 
             // grayscalingToolStripMenuItem
             // 
             this.grayscalingToolStripMenuItem.Name = "grayscalingToolStripMenuItem";
-            this.grayscalingToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.grayscalingToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.grayscalingToolStripMenuItem.Text = "Grayscaling";
             this.grayscalingToolStripMenuItem.Click += new System.EventHandler(this.grayscalingToolStripMenuItem_Click);
             // 
             // inversionToolStripMenuItem
             // 
             this.inversionToolStripMenuItem.Name = "inversionToolStripMenuItem";
-            this.inversionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.inversionToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.inversionToolStripMenuItem.Text = "Inversion";
             this.inversionToolStripMenuItem.Click += new System.EventHandler(this.inversionToolStripMenuItem_Click);
             // 
             // mirrorHorizontalToolStripMenuItem
             // 
             this.mirrorHorizontalToolStripMenuItem.Name = "mirrorHorizontalToolStripMenuItem";
-            this.mirrorHorizontalToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.mirrorHorizontalToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.mirrorHorizontalToolStripMenuItem.Text = "Mirror Horizontal";
             this.mirrorHorizontalToolStripMenuItem.Click += new System.EventHandler(this.mirrorHorizontalToolStripMenuItem_Click);
             // 
             // mirrorToolStripMenuItem
             // 
             this.mirrorToolStripMenuItem.Name = "mirrorToolStripMenuItem";
-            this.mirrorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.mirrorToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.mirrorToolStripMenuItem.Text = "Mirror Vertical";
             this.mirrorToolStripMenuItem.Click += new System.EventHandler(this.mirrorToolStripMenuItem_Click);
             // 
             // histogramToolStripMenuItem
             // 
             this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
-            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.histogramToolStripMenuItem.Text = "Histogram";
             this.histogramToolStripMenuItem.Click += new System.EventHandler(this.histogramToolStripMenuItem_Click);
             // 
             // sepiaToolStripMenuItem
             // 
             this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
-            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
             this.sepiaToolStripMenuItem.Text = "Sepia";
             this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.sepiaToolStripMenuItem_Click);
             // 
@@ -256,6 +270,85 @@
             this.contrastToolStripMenuItem.Text = "Contrast";
             this.contrastToolStripMenuItem.Click += new System.EventHandler(this.contrastToolStripMenuItem_Click);
             // 
+            // convolutionToolStripMenuItem
+            // 
+            this.convolutionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.smoothToolStripMenuItem,
+            this.gaussianBlurToolStripMenuItem,
+            this.meanRemovalToolStripMenuItem,
+            this.sharpenToolStripMenuItem,
+            this.embossToolStripMenuItem,
+            this.edgeDetectQuickToolStripMenuItem,
+            this.edgeDetectHorizontalToolStripMenuItem,
+            this.edgeDetectVerticalToolStripMenuItem,
+            this.edgeDetectAllDetectionToolStripMenuItem});
+            this.convolutionToolStripMenuItem.Name = "convolutionToolStripMenuItem";
+            this.convolutionToolStripMenuItem.Size = new System.Drawing.Size(261, 29);
+            this.convolutionToolStripMenuItem.Text = "Convolution Process Features";
+            // 
+            // smoothToolStripMenuItem
+            // 
+            this.smoothToolStripMenuItem.Name = "smoothToolStripMenuItem";
+            this.smoothToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.smoothToolStripMenuItem.Text = "Smooth";
+            this.smoothToolStripMenuItem.Click += new System.EventHandler(this.smoothToolStripMenuItem_Click);
+            // 
+            // gaussianBlurToolStripMenuItem
+            // 
+            this.gaussianBlurToolStripMenuItem.Name = "gaussianBlurToolStripMenuItem";
+            this.gaussianBlurToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.gaussianBlurToolStripMenuItem.Text = "Gaussian Blur";
+            this.gaussianBlurToolStripMenuItem.Click += new System.EventHandler(this.gaussianBlurToolStripMenuItem_Click);
+            // 
+            // meanRemovalToolStripMenuItem
+            // 
+            this.meanRemovalToolStripMenuItem.Name = "meanRemovalToolStripMenuItem";
+            this.meanRemovalToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.meanRemovalToolStripMenuItem.Text = "Mean Removal";
+            this.meanRemovalToolStripMenuItem.Click += new System.EventHandler(this.meanRemovalToolStripMenuItem_Click);
+            // 
+            // sharpenToolStripMenuItem
+            // 
+            this.sharpenToolStripMenuItem.Name = "sharpenToolStripMenuItem";
+            this.sharpenToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.sharpenToolStripMenuItem.Text = "Sharpen";
+            this.sharpenToolStripMenuItem.Click += new System.EventHandler(this.sharpenToolStripMenuItem_Click);
+            // 
+            // embossToolStripMenuItem
+            // 
+            this.embossToolStripMenuItem.Name = "embossToolStripMenuItem";
+            this.embossToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.embossToolStripMenuItem.Text = "Emboss Laplacian";
+            this.embossToolStripMenuItem.Click += new System.EventHandler(this.embossToolStripMenuItem_Click);
+            // 
+            // edgeDetectQuickToolStripMenuItem
+            // 
+            this.edgeDetectQuickToolStripMenuItem.Name = "edgeDetectQuickToolStripMenuItem";
+            this.edgeDetectQuickToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.edgeDetectQuickToolStripMenuItem.Text = "Edge Detect Quick";
+            this.edgeDetectQuickToolStripMenuItem.Click += new System.EventHandler(this.edgeDetectQuickToolStripMenuItem_Click);
+            // 
+            // edgeDetectHorizontalToolStripMenuItem
+            // 
+            this.edgeDetectHorizontalToolStripMenuItem.Name = "edgeDetectHorizontalToolStripMenuItem";
+            this.edgeDetectHorizontalToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.edgeDetectHorizontalToolStripMenuItem.Text = "Edge Detect Horizontal";
+            this.edgeDetectHorizontalToolStripMenuItem.Click += new System.EventHandler(this.edgeDetectHorizontalToolStripMenuItem_Click);
+            // 
+            // edgeDetectVerticalToolStripMenuItem
+            // 
+            this.edgeDetectVerticalToolStripMenuItem.Name = "edgeDetectVerticalToolStripMenuItem";
+            this.edgeDetectVerticalToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.edgeDetectVerticalToolStripMenuItem.Text = "Edge Detect Vertical";
+            this.edgeDetectVerticalToolStripMenuItem.Click += new System.EventHandler(this.edgeDetectVerticalToolStripMenuItem_Click);
+            // 
+            // edgeDetectAllDetectionToolStripMenuItem
+            // 
+            this.edgeDetectAllDetectionToolStripMenuItem.Name = "edgeDetectAllDetectionToolStripMenuItem";
+            this.edgeDetectAllDetectionToolStripMenuItem.Size = new System.Drawing.Size(311, 34);
+            this.edgeDetectAllDetectionToolStripMenuItem.Text = "Edge Detect All Direction";
+            this.edgeDetectAllDetectionToolStripMenuItem.Click += new System.EventHandler(this.edgeDetectAllDetectionToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(71, 509);
@@ -264,6 +357,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // pictureBox2
             // 
@@ -295,6 +389,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(1120, 509);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(500, 500);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -367,11 +462,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 207);
+            this.label2.Location = new System.Drawing.Point(71, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 10;
             this.label2.Text = "Brightness";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -469,11 +565,33 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(71, 299);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(162, 20);
+            this.label7.TabIndex = 21;
+            this.label7.Text = "Weight Value for CPF";
+            // 
+            // trackBar6
+            // 
+            this.trackBar6.Location = new System.Drawing.Point(71, 343);
+            this.trackBar6.Maximum = 100;
+            this.trackBar6.Minimum = 1;
+            this.trackBar6.Name = "trackBar6";
+            this.trackBar6.Size = new System.Drawing.Size(648, 69);
+            this.trackBar6.TabIndex = 21;
+            this.trackBar6.Value = 1;
+            this.trackBar6.Scroll += new System.EventHandler(this.trackBar6_Scroll);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1678, 1050);
+            this.Controls.Add(this.trackBar6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.comboBox1);
@@ -509,6 +627,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -561,6 +680,18 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ToolStripMenuItem convolutionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem smoothToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gaussianBlurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem meanRemovalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sharpenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem embossToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edgeDetectQuickToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edgeDetectHorizontalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edgeDetectVerticalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edgeDetectAllDetectionToolStripMenuItem;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TrackBar trackBar6;
     }
 }
 

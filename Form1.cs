@@ -22,7 +22,7 @@ namespace Kisteria_DIP_activity
         VideoCaptureDevice device;
         FilterInfoCollection filterInfoCollection;
         int mode;
-        int col_mode = 0;
+        int column_mode = 0;
         int value;
         public Form1()
         {
@@ -403,6 +403,94 @@ namespace Kisteria_DIP_activity
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void smoothToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            column_mode = 1;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void trackBar6_Scroll(object sender, EventArgs e)
+        {
+            BasicDIP.CopyImage(ref loaded, ref processed);
+            switch (column_mode)
+            {
+                case 1:
+                    BitmapFilter.Smooth(processed, trackBar6.Value);
+                    break;
+                case 2:
+                    BitmapFilter.GaussianBlur(processed, trackBar6.Value);
+                    break;
+                case 3:
+                    BitmapFilter.MeanRemoval(processed, trackBar6.Value);
+                    break;
+                case 4:
+                    BitmapFilter.Sharpen(processed, trackBar6.Value);
+                    break;
+            }
+            pictureBox2.Image = processed;
+        }
+
+        private void gaussianBlurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ImageProcess.copyImage(ref loaded, ref processed);
+            BitmapFilter.Smooth(processed, trackBar6.Value);
+        }
+
+        private void meanRemovalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            column_mode = 3;
+        }
+
+        private void sharpenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            column_mode = 4;
+        }
+
+        private void embossToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.CopyImage(ref loaded, ref processed);
+            BitmapFilter.EmbossLaplacian(processed);
+            pictureBox2.Image = processed;
+        }
+
+        private void edgeDetectQuickToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.CopyImage(ref loaded, ref processed);
+            BitmapFilter.EdgeDetectQuick(processed);
+            pictureBox2.Image = processed;
+        }
+
+        private void edgeDetectHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.CopyImage(ref loaded, ref processed);
+            BitmapFilter.EdgeDetectHorizontal(processed);
+            pictureBox2.Image = processed;
+        }
+
+        private void edgeDetectVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.CopyImage(ref loaded, ref processed);
+            BitmapFilter.EdgeDetectVertical(processed);
+            pictureBox2.Image = processed;
+        }
+
+        private void edgeDetectAllDetectionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BasicDIP.CopyImage(ref loaded, ref processed);
+            BitmapFilter.EdgeDetectVertical(processed);
+            BitmapFilter.EdgeDetectHorizontal(processed);
+            pictureBox2.Image = processed;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
